@@ -1,4 +1,4 @@
-import { useMemo, type FC } from "react";
+import { useMemo, type FC } from 'react';
 
 interface SparklesProps {
   active: boolean;
@@ -13,7 +13,7 @@ interface Particle {
   color: string;
 }
 
-const COLORS = ["#ff6b8a", "#ff4d6d", "#ffb3c1", "#ffd6e0", "#ff0a54"];
+const COLORS = ['#ff6b8a', '#ff4d6d', '#ffb3c1', '#ffd6e0', '#ff0a54'];
 
 const Sparkles: FC<SparklesProps> = ({ active }) => {
   const particles = useMemo<Particle[]>(
@@ -45,8 +45,8 @@ const Sparkles: FC<SparklesProps> = ({ active }) => {
               background: p.color,
               animation: `sparkle 0.8s ${p.delay}s ease-out forwards`,
               // @ts-expect-error -- CSS custom properties
-              "--tx": `${Math.cos(rad) * p.distance}px`,
-              "--ty": `${Math.sin(rad) * p.distance}px`,
+              '--tx': `${Math.cos(rad) * p.distance}px`,
+              '--ty': `${Math.sin(rad) * p.distance}px`,
             }}
           />
         );

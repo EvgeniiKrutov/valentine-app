@@ -117,7 +117,7 @@ export function useBackgroundMusic() {
   const ctxRef = useRef<AudioContext | null>(null);
   const masterGainRef = useRef<GainNode | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const stop = useCallback(() => {
     if (timerRef.current) {
@@ -185,9 +185,7 @@ export function useBackgroundMusic() {
     else start();
   }, [isPlaying, start, stop]);
 
-  // Cleanup on unmount
   useEffect(() => {
-    start();
     return () => {
       stop();
     };

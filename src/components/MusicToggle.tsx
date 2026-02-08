@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC } from 'react';
 
 interface MusicToggleProps {
   isPlaying: boolean;
@@ -9,20 +9,18 @@ const MusicToggle: FC<MusicToggleProps> = ({ isPlaying, onToggle }) => {
   return (
     <button
       onClick={onToggle}
-      aria-label={isPlaying ? "Выключить музыку" : "Включить музыку"}
-      title={isPlaying ? "Выключить музыку" : "Включить музыку"}
+      aria-label={isPlaying ? 'Выключить музыку' : 'Включить музыку'}
+      title={isPlaying ? 'Выключить музыку' : 'Включить музыку'}
       className="fixed top-5 right-5 z-50 w-12 h-12 rounded-full
         flex items-center justify-center cursor-pointer
         transition-all duration-300 hover:scale-110 active:scale-95
         backdrop-blur-md"
       style={{
         background: isPlaying
-          ? "rgba(255, 10, 84, 0.15)"
-          : "rgba(255, 255, 255, 0.05)",
-        border: `1px solid ${isPlaying ? "rgba(255, 10, 84, 0.3)" : "rgba(255,255,255,0.1)"}`,
-        boxShadow: isPlaying
-          ? "0 0 20px rgba(255, 10, 84, 0.2)"
-          : "none",
+          ? 'rgba(255, 10, 84, 0.15)'
+          : 'rgba(255, 255, 255, 0.05)',
+        border: `1px solid ${isPlaying ? 'rgba(255, 10, 84, 0.3)' : 'rgba(255,255,255,0.1)'}`,
+        boxShadow: isPlaying ? '0 0 20px rgba(255, 10, 84, 0.2)' : 'none',
       }}
     >
       {isPlaying ? (
@@ -32,9 +30,9 @@ const MusicToggle: FC<MusicToggleProps> = ({ isPlaying, onToggle }) => {
               key={i}
               className="w-[3px] rounded-full"
               style={{
-                background: "linear-gradient(to top, #ff0a54, #ffb3c6)",
+                background: 'linear-gradient(to top, #ff0a54, #ffb3c6)',
                 animation: `soundBar 0.8s ${delay}s ease-in-out infinite alternate`,
-                height: "60%",
+                height: '60%',
               }}
             />
           ))}

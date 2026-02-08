@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC } from 'react';
 
 interface PS5TrophyProps {
   visible: boolean;
@@ -13,17 +13,17 @@ const PS5Trophy: FC<PS5TrophyProps> = ({ visible }) => {
         className="relative overflow-hidden rounded-2xl p-7"
         style={{
           background:
-            "linear-gradient(135deg, rgba(30,30,40,0.95), rgba(20,20,30,0.98))",
-          border: "1px solid rgba(255,255,255,0.08)",
+            'linear-gradient(135deg, rgba(30,30,40,0.95), rgba(20,20,30,0.98))',
+          border: '1px solid rgba(255,255,255,0.08)',
           boxShadow:
-            "0 25px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)",
+            '0 25px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)',
         }}
       >
         {/* PS accent line */}
         <div
           className="absolute top-0 left-0 right-0 h-[3px]"
           style={{
-            background: "linear-gradient(90deg, #0070d1, #00a2ff, #0070d1)",
+            background: 'linear-gradient(90deg, #0070d1, #00a2ff, #0070d1)',
           }}
         />
 
@@ -32,9 +32,9 @@ const PS5Trophy: FC<PS5TrophyProps> = ({ visible }) => {
           <div
             className="flex-shrink-0 flex items-center justify-center w-[72px] h-[72px] rounded-xl text-4xl"
             style={{
-              background: "linear-gradient(135deg, #1a1a2e, #16213e)",
-              border: "1px solid rgba(255,255,255,0.06)",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+              background: 'linear-gradient(135deg, #1a1a2e, #16213e)',
+              border: '1px solid rgba(255,255,255,0.06)',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
             }}
           >
             🏆

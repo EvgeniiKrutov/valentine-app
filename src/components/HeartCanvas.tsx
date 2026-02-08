@@ -1,5 +1,5 @@
-import { useEffect, useRef, type FC } from "react";
-import { heartPoint } from "../utils/heart";
+import { useEffect, useRef, type FC } from 'react';
+import { heartPoint } from '../utils/heart';
 
 interface HeartCanvasProps {
   visible: boolean;
@@ -13,7 +13,7 @@ const HeartCanvas: FC<HeartCanvasProps> = ({ visible }) => {
     if (!visible || !canvasRef.current) return;
 
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const dpr = window.devicePixelRatio || 1;
@@ -46,8 +46,12 @@ const HeartCanvas: FC<HeartCanvasProps> = ({ visible }) => {
           s <= currentScale ? 1 : currentScale - Math.floor(currentScale);
 
         const gradient = ctx.createRadialGradient(
-          cx, cy, 0,
-          cx, cy, s * baseScale * 1.2,
+          cx,
+          cy,
+          0,
+          cx,
+          cy,
+          s * baseScale * 1.2,
         );
         gradient.addColorStop(0, `rgba(255, 10, 84, ${0.9 * alpha})`);
         gradient.addColorStop(0.5, `rgba(255, 77, 109, ${0.7 * alpha})`);
@@ -64,7 +68,7 @@ const HeartCanvas: FC<HeartCanvasProps> = ({ visible }) => {
         }
         ctx.closePath();
 
-        ctx.shadowColor = "rgba(255, 10, 84, 0.4)";
+        ctx.shadowColor = 'rgba(255, 10, 84, 0.4)';
         ctx.shadowBlur = 15;
         ctx.fillStyle = gradient;
         ctx.fill();
@@ -92,8 +96,8 @@ const HeartCanvas: FC<HeartCanvasProps> = ({ visible }) => {
       ref={canvasRef}
       className="transition-opacity duration-700"
       style={{
-        width: "100%",
-        height: "100%",
+        width: '100%',
+        height: '100%',
         maxWidth: 400,
         maxHeight: 380,
         opacity: visible ? 1 : 0,

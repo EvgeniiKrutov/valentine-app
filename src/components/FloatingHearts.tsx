@@ -1,4 +1,4 @@
-import { useMemo, type FC } from "react";
+import { useMemo, type FC } from 'react';
 
 interface Heart {
   id: number;
@@ -12,7 +12,7 @@ interface Heart {
   color: string;
 }
 
-const SYMBOLS = ["♥", "❤", "💕", "♡"] as const;
+const SYMBOLS = ['♥', '❤', '💕', '♡'] as const;
 
 const FloatingHearts: FC = () => {
   const hearts = useMemo<Heart[]>(
@@ -39,13 +39,13 @@ const FloatingHearts: FC = () => {
           className="absolute"
           style={{
             left: `${h.left}%`,
-            bottom: "-40px",
+            bottom: '-40px',
             fontSize: `${h.size}px`,
             opacity: h.opacity,
             color: h.color,
             animation: `floatUp ${h.duration}s ${h.delay}s ease-in infinite`,
             // @ts-expect-error -- CSS custom property
-            "--drift": `${h.drift}px`,
+            '--drift': `${h.drift}px`,
           }}
         >
           {h.symbol}
