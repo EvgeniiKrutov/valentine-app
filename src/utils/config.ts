@@ -6,7 +6,7 @@ function env(key: string, fallback: string): string {
 
 export const config = {
   recipientName: env("VITE_RECIPIENT_NAME", "Таня"),
-  yesMessage: env("VITE_YES_MESSAGE", "Лисенок я обожаю тебя!🦊|С Днем святого Валентина! 💗"),
+  yesMessage: env("VITE_YES_MESSAGE", `Целую тебя, мой лисенок 💗🦊|"Зеленая книга", 1:09:04`),
 } as const;
 
 /** Split "line1|line2" into array */
