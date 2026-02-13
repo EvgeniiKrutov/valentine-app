@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://EvgeniiKrutov.github.io/valentine-app/",
+  "homepage": "https://EvgeniiKrutov.github.io/secret/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
